@@ -5,7 +5,7 @@
 }
 
 <h2>Lista Clientes</h2>
-<h2>@Html.ActionLink("Nuevo Cliente", "Nueva", "Clientes")</h2>
+<h2>@Html.ActionLink("Agregar Cliente", "Nueva", "Clientes")</h2>
 
 <table id="clientes" class="table table-bordered table-hover">
 	<thead>
@@ -27,9 +27,8 @@
 				<td>@cliente.Apellido</td>
 				<!--<td>@Html.ActionLink("Eliminar","Eliminar","Clientes", new { id = cliente.ID },null)</td>-->
 
-				<td>
-					<button data-customer-id="@cliente.ID" class="btn-link js-delete">Borrar</button>
-				</td>
+				<td><button data-customer-id="@cliente.ID" class="btn-link js-delete">Borrar</button></td>
+
 				@*<td>@cliente.Salario</td>
 					if (@cliente.Activo == true)
 					{
@@ -52,7 +51,7 @@
 
 			$("#clientes").on("click", ".js-delete", function () {
 				var button = $(this);
-				if (confirm("Seguro")) {
+				if (confirm("¿Seguro que quieres eliminar este cliente?")) {
 					$.ajax({
 						url: "/clientes/Eliminar/" + button.attr("data-customer-id"),
 
