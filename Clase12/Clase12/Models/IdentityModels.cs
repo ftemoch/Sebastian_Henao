@@ -22,6 +22,10 @@ namespace Clase12.Models
 	{
 		public DbSet<Cliente> Clientes { get; set; }
 		public DbSet<Movie> Movies { get; set; }
+		public DbSet<TipoCliente> TipoClientes { get; set; }
+		public DbSet<TipoPelicula> TipoPeliculas { get; set; }
+		public DbSet<Tarifas> Tarifas { get; set; }
+
 		public ApplicationDbContext()
 			: base("DefaultConnection", throwIfV1Schema: false)
 		{

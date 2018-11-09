@@ -7,13 +7,13 @@ namespace Clase12.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class CreacionDb1 : IMigrationMetadata
+    public sealed partial class Mvs : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(CreacionDb1));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Mvs));
         
         string IMigrationMetadata.Id
         {
-            get { return "201810291611520_CreacionDb1"; }
+            get { return "201811090022253_Mvs"; }
         }
         
         string IMigrationMetadata.Source

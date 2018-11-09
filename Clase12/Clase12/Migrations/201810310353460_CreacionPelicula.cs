@@ -3,24 +3,25 @@ namespace Clase12.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class CreacionDb1 : DbMigration
+    public partial class CreacionPelicula : DbMigration
     {
         public override void Up()
         {
             CreateTable(
-                "dbo.Movies",
+                "dbo.TipoPeliculas",
                 c => new
                     {
-                        ID = c.Int(nullable: false, identity: true),
+                        id = c.Byte(nullable: false),
                         Nombre = c.String(),
+                        costoDia = c.Byte(nullable: false),
                     })
-                .PrimaryKey(t => t.ID);
-            
+                .PrimaryKey(t => t.id);           
+       
         }
         
         public override void Down()
-        {
-            DropTable("dbo.Movies");
+        {            
+            DropTable("dbo.TipoPeliculas");
         }
     }
 }
